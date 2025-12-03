@@ -132,7 +132,7 @@
 //         break       
 //     default : 
 //     console.log("your user not found");
-    
+
 // }
 
 
@@ -241,10 +241,9 @@
 // let prices = [100,200,1000000,500,20]
 
 
+
 // for(let price of prices){
-//     let priceOfProdcut = price + 100
-//     console.log(priceOfProdcut);
-    
+//     console.log(price);
 // }
 
 
@@ -285,12 +284,318 @@
 // function
 
 // declare - parameter
+// let userName = prompt("Enter your user name ? ")
 
-function sayHello(name,age,email){
-    console.log("hello " + name + " with age " + age + " and email " + email);
-}
 
-// call 
+// function sayHello(name){
+//     console.log('hello ' + name);
+// }
+// // call 
 
-sayHello('ali',15,"pouya2402@gmail.com")
-sayHello('pouya',25,"pouya2402@gmail.com")
+// sayHello(userName)
+// sayHello('pouya',25,"pouya2402@gmail.com")
+
+
+// return
+
+
+
+// function calcPrice(p1,p2,p3){
+//     let result = p1 + p2 + p3
+
+//     return result
+// }
+
+// let t = calcPrice(90,100,40)
+
+
+// let delivery = t + 50
+
+// console.log(delivery);
+
+
+
+// method
+// let product = {
+//     title : "shoes",
+//     size  : [37,38,39,40],
+//     price : 1200000,
+//     discount : 200,
+//     calcPrice() {
+//         let r = this.price - this.discount
+//         return r
+//     }
+// }
+
+
+// let totalPrice = product.calcPrice()
+
+
+// console.log(totalPrice + 923);
+
+
+
+
+
+// constructor & factory -> function
+
+
+//factory
+
+// function CreateProduct(title, size) {
+//     return {
+//         title,
+//         size,
+//         price: null,
+//         discount: 500,
+//         calcPriceOfSize() {
+//             let productSize = this.size
+//             switch (productSize) {
+//                 case 37:
+//                     this.price = 1000000
+//                     break
+//                 case 38:
+//                     this.price = 1500000
+//                     break
+//             }
+//             let r = this.price - this.discount
+//             return r
+//         }
+//     }
+// }
+
+
+// let shoe1 = CreateProduct('nike', 37)
+
+// console.log(shoe1.calcPriceOfSize());
+
+
+// function CreateProduct(title,price,discount){
+//     this.title = title
+//     this.price = price
+//     this.discount = discount
+//     this.calc = function calcPrice(){
+//         console.log(price-discount);
+//     }
+    
+// }
+
+
+// let shoes = new CreateProduct('shoes',1000,10)
+
+// console.log(shoes.calc());
+
+
+
+
+
+
+// premtive - refrence 
+
+// premtive
+
+// let user = "ali"
+
+// let copyuser = user
+
+// copyuser = 'pouya'
+
+// console.log(user);
+
+// console.log(copyuser);
+
+
+
+// // refrence
+
+// let user1 = {
+//     name : "mahdi"
+// }
+
+// let copyObj = user1
+
+// copyObj.name = 'mmd'
+
+// console.log(user1);
+
+// console.log(copyObj);
+
+
+
+// destructuring => obj & array
+// key : value
+// let product = {
+//     title : "shoes",
+//     size  : [37,38,39,40],
+//     price : 1200000,
+//     discount : 200,
+//     calcPrice() {
+//         let r = this.price - this.discount
+//         return r
+//     }
+// }
+
+// console.log(product.size[1]);
+
+
+// let {price , size ,title} = product
+
+// console.log(title);
+
+
+// let nums = [1,2,3,4,5,6]
+
+// let [ d, , , ,a] = nums
+
+// console.log(d,a);
+
+
+
+
+// function welcomeMessage({name,city,gmail}){
+//     // console.log("hello " + name + " from " + city + " with gmail " + gmail);
+//     // literal template
+
+//     console.log(`hello ${name} from ${city} with email ${gmail}`);
+    
+// }
+
+// welcomeMessage({
+//     name : "pouya",
+//     city : "tehran",
+//     gmail : "pouya@gmail.com"
+// })
+
+
+
+// spread oprator => ...
+
+// let nums = [1,2,3,4]
+
+// // 1 - add sth to array
+
+// let num2 = [...nums,5,6,7]
+
+
+// console.log(num2);
+
+// // 2 - pass all array index to argument
+
+// console.log(nums[0]);
+// console.log(nums[1]);
+// console.log(nums[2]);
+
+// console.log(...nums);
+
+
+// // 3 - create new array
+
+// let words = ['a','b','c','d']
+
+
+// let arr = [...words,'s','e']
+
+// console.log(arr);
+
+
+// // 4 - string
+
+// let str = 'pouyazohrevand'
+
+// let arr2 = [...str]
+
+
+// console.log(arr2);
+
+
+// // 5 - add item to object
+
+// let user = {
+//     name :"pouya",
+//     city : "tehran",
+
+// }
+// let nUser = {...user , email : "pouya@gmail.com"}
+// console.log(nUser);
+
+
+
+
+
+// set
+
+
+
+// 1 - uniq data
+let nums = new Set([1,2,2,3,3,3,4,5])
+
+// console.log(nums);
+
+
+// 2 - size
+
+// console.log(nums.size);
+
+// 3 - add
+
+// nums.add(10)
+
+// console.log(nums);
+
+// 4 - delete
+
+// nums.delete(1)
+
+// console.log(nums);
+
+// 5 - clear
+
+// nums.clear()
+
+// console.log(nums);
+
+
+// 6 - for
+
+// for(let item of nums) {
+//     console.log(item);
+    
+// }
+
+
+// use case
+
+// let role = ['admin', 'superuser' , 'owner' , 'admin' , 'teacher', 'superuser', 'owner', 'owner']
+
+// let newRole = [...new Set(role)]
+
+// console.log(newRole);
+
+// zarb(7,5)
+
+// // expression - declaration
+
+// //declaration
+// function zarb(a,b){
+//     console.log(a * b);
+// }
+
+// zarb(5,5)
+
+// // expression
+
+// let zarb2 = function(a,b){
+// console.log(a * b);
+// }
+
+// zarb2(5,6)
+
+
+
+
+// arrow function  =>
+
+let zarb = (a,b) => console.log(a * b);
+
+
+zarb(5,7)
