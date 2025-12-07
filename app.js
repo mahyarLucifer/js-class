@@ -377,7 +377,7 @@
 //     this.calc = function calcPrice(){
 //         console.log(price-discount);
 //     }
-    
+
 // }
 
 
@@ -436,6 +436,8 @@
 // }
 
 // console.log(product.size[1]);
+// console.log(product.price);
+// console.log(product.discount);
 
 
 // let {price , size ,title} = product
@@ -444,6 +446,11 @@
 
 
 // let nums = [1,2,3,4,5,6]
+// // console.log(nums[3,4]);
+
+// let [a,b,c,d,f,h] = nums
+
+// console.log(d);
 
 // let [ d, , , ,a] = nums
 
@@ -455,9 +462,10 @@
 // function welcomeMessage({name,city,gmail}){
 //     // console.log("hello " + name + " from " + city + " with gmail " + gmail);
 //     // literal template
+//     console.log("hello " + name + " from " + city + " with gmail " + gmail);
 
-//     console.log(`hello ${name} from ${city} with email ${gmail}`);
-    
+//     console.log(`hello ${name} from ${city} with gmail ${gmail}`);
+
 // }
 
 // welcomeMessage({
@@ -472,6 +480,7 @@
 
 // let nums = [1,2,3,4]
 
+
 // // 1 - add sth to array
 
 // let num2 = [...nums,5,6,7]
@@ -479,7 +488,7 @@
 
 // console.log(num2);
 
-// // 2 - pass all array index to argument
+// 2 - pass all array index to argument
 
 // console.log(nums[0]);
 // console.log(nums[1]);
@@ -517,6 +526,8 @@
 // }
 // let nUser = {...user , email : "pouya@gmail.com"}
 // console.log(nUser);
+// console.log(user);
+
 
 
 
@@ -527,22 +538,22 @@
 
 
 // 1 - uniq data
-let nums = new Set([1,2,2,3,3,3,4,5])
+// let nums = new Set(['amir','amir','amir','ali','mahyar','yasin','yasin','yasin','yasin','yasin','yasin',1,1,1,1,1])
 
 // console.log(nums);
 
 
-// 2 - size
+// // 2 - size
 
 // console.log(nums.size);
 
-// 3 - add
+// // 3 - add
 
 // nums.add(10)
 
 // console.log(nums);
 
-// 4 - delete
+// // 4 - delete
 
 // nums.delete(1)
 
@@ -555,11 +566,11 @@ let nums = new Set([1,2,2,3,3,3,4,5])
 // console.log(nums);
 
 
-// 6 - for
+// 6 - for of
 
 // for(let item of nums) {
 //     console.log(item);
-    
+
 // }
 
 
@@ -576,13 +587,20 @@ let nums = new Set([1,2,2,3,3,3,4,5])
 // // expression - declaration
 
 // //declaration
+
+// hoisting
+
+// zarb(5,6)
+
 // function zarb(a,b){
 //     console.log(a * b);
 // }
 
 // zarb(5,5)
 
-// // expression
+// // // expression
+
+// zarb2(8,6)
 
 // let zarb2 = function(a,b){
 // console.log(a * b);
@@ -593,9 +611,253 @@ let nums = new Set([1,2,2,3,3,3,4,5])
 
 
 
-// arrow function  =>
-
-let zarb = (a,b) => console.log(a * b);
+// arrow function  => 
 
 
-zarb(5,7)
+// let zarb = (a,b) => console.log(a * b);
+
+
+// zarb(5,7)
+
+
+// let zarb = () => console.log("hello");
+
+// zarb()
+
+
+// عددی که داده میشه اگر بر 3 بخش پذیر بود بگه فیز اگه به 5 بود بگه باز اگه به جفتش فیز باز
+
+
+
+// function fizzBuzz(num){
+//     if(num % 3 == 0 && num % 5 == 0) console.log('fizzBuzz');
+//     else if (num % 3 == 0) console.log("fizz");
+//     else if(num % 5 == 0) console.log('buzz');
+//     else console.log("its not fizz or buzz");
+
+// }
+
+
+// fizzBuzz(15)
+
+
+
+
+
+// scoop => block , global
+
+// {} => yek block
+
+// let counter = 5
+
+// function sayHello() {
+
+//     console.log(counter);
+
+// }
+// sayHello()
+
+
+
+// default paramter
+
+// function sayHello(username = 'user'){
+//     console.log(`hello ${username}`);
+// }
+
+// sayHello('pouya')
+
+// function Calc(price , discount = 100){
+//     console.log(price-discount);
+    
+// }
+// Calc(500 , )
+
+
+// first class & call back & higher order function = HOF => function
+
+// 1 - let add = () => {}
+// 2 - let add2 = (add) = {console.log(add)}
+// 3 - let add2 = (add2) = return add2
+
+// HOF => abstraction (oop) => yani ye kari anjam bedi ke hajm code kam beshe
+
+// برنامه ای بنویسید که 2 عدد گرفته و آنها را جمع تفریق و ضرب کند
+
+// function Increase(a,b){
+//     let result = a + b
+//     console.log(result);
+// }
+
+// Increase(5,10)
+
+
+// function Decrease(a,b){
+//     let result = a - b
+//     console.log(result);
+// }
+
+//  Decrease(10,5)
+
+
+//  function Zarb(a,b){
+//     let result = a * b
+//     console.log(result);
+// }
+
+// Zarb(10,5)
+
+
+// function opration(a,b,cb){
+//     let result = cb(a,b)
+
+//     console.log(result);
+
+// }
+
+// function inc(a,b){
+//     return a + b
+// }
+// function dec(a,b){
+//     return a - b
+// }
+// function zarb(a,b){
+//     return a * b
+// }
+
+// opration(10,20,inc)
+
+
+
+
+// call apply => function method
+
+// let user = {
+//     name : "pouya",
+//     city : 'tehran',
+//     birth : 1995,
+//     CalcYears(num){
+//         console.log(2025 - this.birth + num);
+//     },
+//     welcome(){
+//         console.log(`hello ${this.name} from ${this.city} `);
+        
+//     }
+// }
+
+// let user2 = {
+//     name : 'ali',
+//     city : "shiraz",
+//     birth : 2006,
+// }
+
+// let message = user.welcome
+
+// let calcYear = user.CalcYears
+
+
+// calcYear.call(user2,5)
+
+// calcYear.apply(user2,[2])
+
+
+
+// closure => encapsulating , persistence
+
+// persistence => پایداری کد
+// capsulating => امنیت
+
+// 1 - count login user
+// 2 - count sign up user
+
+// let counter = 0
+
+// function Login(){
+    
+//     counter++;
+
+//     console.log(counter);
+    
+// }
+
+// Login()
+// Login()
+// Login()  // persistence
+// Login()
+// Login()
+
+
+// function SignUp(){
+    
+//     counter++;
+
+//     console.log(counter);
+    
+// }
+
+// SignUp()
+// SignUp() // capsulating
+// SignUp()
+
+
+
+// closure => کد رو پایدار میکنه و امنیت اطلاعات
+
+// function CounterReq(){
+//     let counter = 0
+//     return function inncreaser(){
+//         counter++
+//         return counter
+//     }
+// }
+
+
+// let loginReq = CounterReq()
+
+// console.log(loginReq());
+// console.log(loginReq());
+// console.log(loginReq()); // persistence
+// console.log(loginReq());
+// console.log(loginReq());
+
+
+// let signUpReq = CounterReq()
+
+// console.log(signUpReq());
+// console.log(signUpReq());
+// console.log(signUpReq()); // capsulating
+// console.log(signUpReq());
+// console.log(signUpReq()); 
+
+
+// string
+// string methods
+
+
+// method => ()
+
+let username = 'poupyapp'
+
+console.log(username.length);
+
+// index of
+
+console.log(username.indexOf('p'));
+
+// last index of
+
+console.log(username.lastIndexOf('p'));
+
+// slice
+
+console.log(username.slice(0,3));
+
+// includes
+
+console.log(username.includes("p"));
+
+// join split
+
+let str = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error odit pariatur nam eveniet dolore, officia ad? Beatae ipsam natus reiciendis fuga fugit odit eius, suscipit nulla iure eos explicabo error!'
+
+let news = str.split(' ').join("-")
