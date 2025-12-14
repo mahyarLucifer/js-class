@@ -5,6 +5,7 @@
 // object
 // boolean
 
+
 // var age = 10
 
 // var usernaem = "ali"
@@ -669,7 +670,7 @@
 
 // function Calc(price , discount = 100){
 //     console.log(price-discount);
-    
+
 // }
 // Calc(500 , )
 
@@ -741,7 +742,7 @@
 //     },
 //     welcome(){
 //         console.log(`hello ${this.name} from ${this.city} `);
-        
+
 //     }
 // }
 
@@ -773,11 +774,11 @@
 // let counter = 0
 
 // function Login(){
-    
+
 //     counter++;
 
 //     console.log(counter);
-    
+
 // }
 
 // Login()
@@ -788,11 +789,11 @@
 
 
 // function SignUp(){
-    
+
 //     counter++;
 
 //     console.log(counter);
-    
+
 // }
 
 // SignUp()
@@ -836,28 +837,165 @@
 
 // method => ()
 
-let username = 'poupyapp'
+// let username = 'poupyapp'
 
-console.log(username.length);
+// console.log(username.length);
 
-// index of
+// // index of
 
-console.log(username.indexOf('p'));
+// console.log(username.indexOf('p'));
 
-// last index of
+// // last index of
 
-console.log(username.lastIndexOf('p'));
+// console.log(username.lastIndexOf('p'));
 
-// slice
+// // slice
 
-console.log(username.slice(0,3));
+// console.log(username.slice(0,3));
 
-// includes
+// // includes
 
-console.log(username.includes("p"));
+// console.log(username.includes("p"));
 
-// join split
+// // join split
 
-let str = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error odit pariatur nam eveniet dolore, officia ad? Beatae ipsam natus reiciendis fuga fugit odit eius, suscipit nulla iure eos explicabo error!'
+// let str = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error odit pariatur nam eveniet dolore, officia ad? Beatae ipsam natus reiciendis fuga fugit odit eius, suscipit nulla iure eos explicabo error!'
 
-let news = str.split(' ').join("-")
+// let news = str.split(' ').join("-")
+
+
+
+
+
+
+// uppercase - lowercase - trim - padding
+
+// let username = '            POUYA               '
+
+// console.log(username);
+
+// console.log(username.trim());
+
+
+// let cardNumber = '12151111'
+
+// console.log(cardNumber.padStart(10,'*'));
+
+// console.log(cardNumber.padEnd(10,'*'));
+
+
+// let userPassword = prompt("Enter your password ? ")
+
+
+// if (userPassword.toLowerCase().trim() == 'pouya') {
+//     console.log('welcome');
+// }
+// else {
+//     console.log('not found');
+
+// }
+
+
+
+// '6219 8618 1883 8970'
+// '6219-8618-1883-8970'
+// '6219861818838970'
+
+// let txt = 'i-like-dogs-and-live-with-my-dogs'
+
+// console.log(txt.replace('dogs','cats'));
+
+
+// console.log(txt.replaceAll('-',' '));
+
+
+// let cardNumber =  '6219 8618 1883 8970'
+
+// function FilterCardNumber(number){
+//     let num = number.replaceAll(" " , '').replaceAll("-",'').trim()
+//     let last = num.slice(-4)
+//     console.log(num.length);
+    
+//     return last.padStart(num.length , '*')
+// }
+
+
+// console.log(FilterCardNumber('      6219-8618-1883-8970        '));
+
+
+
+// array method
+
+// shif unshift push pop includes indexOf
+
+// let nums = [1,2,3,4,5,6,7,8,'amir']
+
+// nums.pop()
+// nums.push(10)
+
+// nums.shift()
+// nums.unshift(15)
+
+
+// console.log(nums.includes('amir'));
+
+
+// console.log(nums.indexOf('amir'));
+
+
+// console.log(nums);
+
+
+
+
+
+// slice splice concat reverse join at
+
+// let nums = [1,2,3,4,5,6,7,8,'pouya']
+
+// let num2 = [9,10]
+
+// console.log(nums.slice(5));
+
+
+// nums.splice(1,3)
+
+// console.log(nums);
+
+
+// console.log(nums.concat(num2));
+
+
+// console.log(nums.reverse());
+
+
+// console.log(nums.join("-*-"));
+
+
+// console.log(nums.at(8));
+
+// forEach Some Every Filter Map Reduce FindIndex Sort 
+
+
+// let letters = ['a','b','c','d','e','f']
+
+// let newArray = []
+
+
+// letters.forEach(function(item,index){
+//     newArray.push(item)
+// })
+
+// console.log(newArray);
+
+let price = [1000,100000,10000000,10,100,1,500]
+
+console.log(price.sort());
+
+// let newP = price.map((p) => {
+//     return p * 5
+// })
+
+
+
+// console.log(newP);
