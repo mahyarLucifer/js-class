@@ -870,6 +870,17 @@
 
 // uppercase - lowercase - trim - padding
 
+
+// let str = '      HELLO GUYS                               '
+
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+// console.log(str.trim());
+
+// let card = '8970'
+// console.log(card.padStart(10,'*'));
+// console.log(card.padEnd(10,'*'));
+
 // let username = '            POUYA               '
 
 // console.log(username);
@@ -895,6 +906,11 @@
 
 // }
 
+// let txt = 'hello ali how are you ali ali ali ali ali ali'
+
+
+// console.log(txt.replace('ali','mmd'));
+// console.log(txt.replaceAll('ali','mmd'));
 
 
 // '6219 8618 1883 8970'
@@ -915,7 +931,7 @@
 //     let num = number.replaceAll(" " , '').replaceAll("-",'').trim()
 //     let last = num.slice(-4)
 //     console.log(num.length);
-    
+
 //     return last.padStart(num.length , '*')
 // }
 
@@ -931,13 +947,14 @@
 // let nums = [1,2,3,4,5,6,7,8,'amir']
 
 // nums.pop()
+
 // nums.push(10)
 
 // nums.shift()
+
 // nums.unshift(15)
 
-
-// console.log(nums.includes('amir'));
+// console.log(nums.includes(3));
 
 
 // console.log(nums.indexOf('amir'));
@@ -952,6 +969,11 @@
 // slice splice concat reverse join at
 
 // let nums = [1,2,3,4,5,6,7,8,'pouya']
+// []
+// {}
+
+// console.log(nums.slice(-2));
+
 
 // let num2 = [9,10]
 
@@ -969,10 +991,12 @@
 // console.log(nums.reverse());
 
 
-// console.log(nums.join("-*-"));
+// console.log(nums.join("*"));
 
 
-// console.log(nums.at(8));
+// console.log(nums.at(-5));
+
+
 
 // forEach Some Every Filter Map Reduce FindIndex Sort 
 
@@ -988,9 +1012,9 @@
 
 // console.log(newArray);
 
-let price = [1000,100000,10000000,10,100,1,500]
+// let price = [1000,100000,10000000,10,100,1,500]
 
-console.log(price.sort());
+// console.log(price.sort());
 
 // let newP = price.map((p) => {
 //     return p * 5
@@ -999,3 +1023,144 @@ console.log(price.sort());
 
 
 // console.log(newP);
+
+
+// let nums = [10,1000,100,100000,2,200020]
+
+// // mutate
+// // imamute
+// let smallToBig = nums.sort( (a,b) => {
+
+//     return b - a
+// })
+
+// let bigTosmall = nums.sort( (a,b) => {
+
+//     return b - a
+// })
+
+// console.log(smallToBig);
+
+
+
+
+// math      date
+
+// floor  trunc  ceil  random round
+
+// console.log(Math.floor(13.9));
+
+
+// console.log(Math.trunc(13.9));
+
+
+// console.log(Math.ceil(13.1));
+
+
+// console.log(Math.round(13.5));
+
+// let nums = [1,5,56,3,6,3,7]
+
+
+// console.log(Math.max(1,5,56,3,6,3,7));
+
+// console.log(Math.min(1,5,56,3,6,3,7));
+
+// console.log(Math.floor(Math.random() * 100000000));
+
+
+
+// let d = new Date()
+
+// console.log(d.getDate());
+
+// console.log(d.getDay()); // 0 - 6
+
+// console.log(d.getFullYear());
+
+// console.log(d.getHours());
+
+// console.log(d.getMinutes());
+
+// console.log(d.getMonth()); // 0 - 11
+
+// console.log(d.getSeconds());
+
+// console.log(d.getTime());
+
+// console.log(d.toLocaleDateString('fa-IR', {
+//     year : "numeric",
+//     month : "long",
+//     weekday : "long",
+//     day : "numeric"
+// }));
+
+
+
+// setTimeOut vs setInteerVal
+
+
+// let b = setTimeout(() => {
+//     console.log("s");
+
+// }, 4000)
+
+
+
+// clearTimeout(b)
+
+// let c = 0
+
+// let s = setInterval(() => {
+//     c++
+//     console.log(c);
+
+// }, 1000)
+
+// setTimeout(() => {
+//     clearInterval(s)
+// }, 20000)
+
+
+// select 
+
+
+// getById querySlector querySelectorAll
+
+// console.log(document.getElementById("b"));
+
+// console.log(document.querySelector("#s"));
+
+// console.log(document.querySelectorAll("#s"));
+
+// textContet tagName ClassList
+
+// console.log(document.querySelector(".g").textContent);
+
+// console.log(document.querySelector(".g").tagName);
+
+// console.log(document.querySelector(".g").classList);
+
+
+// let o = document.querySelector(".g")
+
+
+// add element to html with js
+
+let p = document.createElement("p")
+
+p.innerText = 'pouya'
+
+console.log(p);
+
+p.classList.add("s")
+
+p.classList.add("h")
+
+p.classList.remove("h")
+
+
+let b = document.querySelector(".box")
+
+b.prepend(p)
+b.append(p)
